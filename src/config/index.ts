@@ -23,3 +23,42 @@ export const EXTRAS = [
   { name: "linux", display: "Linux" },
   { name: "github", display: "GitHub" },
 ];
+
+export const PROJECTS = [
+  {
+    name: "test1",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+  {
+    name: "test2",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+  {
+    name: "test3",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+  {
+    name: "test4",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+  {
+    name: "test5",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+  {
+    name: "test6",
+    url: "https://test.test",
+    image: "/placeholder.jpg",
+    repo: "https://test.test",
+  },
+];

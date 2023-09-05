@@ -7,6 +7,7 @@ import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [isSplashEnd, setIsSplashEnd] = useState(false);
@@ -21,7 +22,9 @@ function App() {
         <Typography variant="h1" textAlign="center">
           Mechanical Michael H.
         </Typography>
+
         <Lottie loop animationData={animationData} play />
+
         <Typography variant="h2" textAlign="center">
           The grind never ends.
         </Typography>
@@ -39,6 +42,8 @@ function App() {
         <About />
 
         <Skills />
+
+        <Projects />
       </Container>
     </>
   );

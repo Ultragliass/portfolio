@@ -9,7 +9,7 @@ export default function Skills() {
         lg={12}
         xs={12}
         sx={{
-          my: 5,
+          mt: 15,
           textAlign: {
             xs: "center",
             lg: "left",
@@ -22,10 +22,18 @@ export default function Skills() {
       {SKILLS.map((skill) => (
         <Grid item lg={3} xs={6} key={skill.name}>
           <Tooltip title={skill.display}>
-            <Card sx={{ width: "150px", margin: "0 auto", padding: "10px" }}>
+            <Card
+              sx={{
+                width: "150px",
+                margin: "0 auto",
+                padding: "10px",
+                backgroundColor: "#fff",
+                border: "10px solid #1f2747",
+              }}
+            >
               <CardMedia
                 component="img"
-                alt="test"
+                alt={skill.name}
                 image={`/logos/${skill.name}.svg`}
               />
             </Card>
@@ -38,7 +46,7 @@ export default function Skills() {
         lg={12}
         xs={12}
         sx={{
-          my: 5,
+          mt: 15,
           textAlign: {
             xs: "center",
             lg: "left",
@@ -48,14 +56,22 @@ export default function Skills() {
         <Typography variant="h3">Extras</Typography>
       </Grid>
 
-      {EXTRAS.map((skill) => (
-        <Grid item lg={3} xs={6} key={skill.name}>
-          <Tooltip title={skill.display}>
-            <Card sx={{ width: "150px", margin: "0 auto", padding: "10px" }}>
+      {EXTRAS.map((extra) => (
+        <Grid item lg={3} xs={6} key={extra.name}>
+          <Tooltip title={extra.display}>
+            <Card
+              sx={{
+                width: "150px",
+                margin: "0 auto",
+                padding: "10px",
+                backgroundColor: "#fff",
+                border: "10px solid #1f2747",
+              }}
+            >
               <CardMedia
                 component="img"
-                alt="test"
-                image={`/logos/${skill.name}.svg`}
+                alt={extra.name}
+                image={`/logos/${extra.name}.svg`}
               />
             </Card>
           </Tooltip>
