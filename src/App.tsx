@@ -6,6 +6,7 @@ import animationData from "./utils/lottie-animation.json";
 import SplashScreen from "./components/SplashScreen/SplashScreen";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const [isSplashEnd, setIsSplashEnd] = useState(false);
@@ -36,6 +37,8 @@ function App() {
         }}
       >
         <About />
+
+        <Skills />
       </Container>
     </>
   );

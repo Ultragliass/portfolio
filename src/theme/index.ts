@@ -33,6 +33,20 @@ const theme = createTheme({
         },
       },
     },
+
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff",
+          border: "10px solid #1f2747",
+          transform: "scale(1)",
+          transition: "transform 0.15s ease-in-out",
+          ":hover": {
+            transform: "scale(1.05)",
+          },
+        },
+      },
+    },
   },
 });
 
@@ -52,8 +66,18 @@ theme.typography.h2 = {
 
 theme.typography.h3 = {
   ...theme.typography.h3,
+  textDecoration: "underline",
+  textDecorationColor: "#fb027f",
+  textUnderlineOffset: "10px",
   [theme.breakpoints.down("md")]: {
     fontSize: "1.17rem",
+  },
+};
+
+theme.typography.h4 = {
+  ...theme.typography.h4,
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1rem",
   },
 };
 
