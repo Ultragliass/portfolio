@@ -8,13 +8,13 @@ export default function SplashScreen(props: SplashScreenProps) {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.from(".splash-text", {
+    tl.from(".splash-content", {
       opacity: 0,
       duration: 1,
       y: -50,
       ease: "power2.out",
     })
-      .to(".splash-text", {
+      .to(".splash-content", {
         opacity: 0,
         duration: 0.5,
         delay: 1,
@@ -23,6 +23,7 @@ export default function SplashScreen(props: SplashScreenProps) {
         display: "none",
         duration: 0,
         onComplete: () => {
+          document.body.style.overflow = "auto";
           onSplashEnd();
         },
       });
@@ -30,7 +31,7 @@ export default function SplashScreen(props: SplashScreenProps) {
 
   return (
     <Box className="splash" sx={{ zIndex: 1101 }}>
-      <Box className="splash-text">{children}</Box>
+      <Box className="splash-content">{children}</Box>
     </Box>
   );
 }

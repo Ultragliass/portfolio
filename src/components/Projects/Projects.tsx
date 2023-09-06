@@ -44,7 +44,7 @@ export default function Projects() {
         <Grid
           item
           lg={4}
-          xs={6}
+          xs={12}
           key={project.name}
           id={project.name.replace(/ /g, "")}
         >

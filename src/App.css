@@ -1,10 +1,14 @@
+body {
+  overflow: hidden;
+}
+
 #root {
   background: linear-gradient(to bottom, #14192f 70%, #fb027f);
   overflow-x: hidden;
 }
 
 .splash {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

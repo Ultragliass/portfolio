@@ -10,6 +10,8 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,11 +22,13 @@ function App() {
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
   ];
 
   useEffect(() => {
     elements.forEach((element, index) => {
       const direction = index % 2 === 0 ? -1 : 1;
+
       const distance = 100;
 
       gsap.from(element.current, {
@@ -43,18 +47,27 @@ function App() {
   }, []);
 
   const onSplashEnd = () => setIsSplashEnd(true);
+
   return (
     <>
       <CssBaseline />
-
       <SplashScreen onSplashEnd={onSplashEnd}>
-        <Typography variant="h1" textAlign="center">
+        <Typography variant="h2" textAlign="center">
           Mechanical Michael H.
         </Typography>
 
-        <Lottie loop animationData={animationData} play />
+        <Lottie
+          loop
+          animationData={animationData}
+          play
+          style={{ width: "50%", margin: "0 auto" }}
+        />
 
-        <Typography variant="h2" textAlign="center">
+        <Typography
+          variant="h3"
+          textAlign="center"
+          sx={{ textDecoration: "none" }}
+        >
           The grind never ends.
         </Typography>
       </SplashScreen>
@@ -68,7 +81,7 @@ function App() {
           transition: "opacity 0.5s ease-in-out",
           display: "flex",
           flexDirection: "column",
-          gap: "500px",
+          gap: "100px",
           my: 10,
         }}
       >
@@ -83,7 +96,13 @@ function App() {
         <div ref={elements[2]}>
           <Projects />
         </div>
+
+        <div ref={elements[3]}>
+          <Contact />
+        </div>
       </Container>
+
+      <Footer />
     </>
   );
 }

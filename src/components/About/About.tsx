@@ -4,6 +4,7 @@ export default function About() {
   return (
     <Grid
       id="about"
+      spacing={3}
       container
       direction="row-reverse"
       sx={{

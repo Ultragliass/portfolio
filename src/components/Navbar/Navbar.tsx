@@ -25,11 +25,13 @@ export default function Navbar(props: { isSplashEnd: boolean }) {
   const handleDrawerToggle = () => setMobileOpen((prevState) => !prevState);
 
   const scrollToElement = (elementID: string) => {
-    const element = document.querySelector(`#${elementID}`);
+    setTimeout(() => {
+      const element = document.querySelector(`#${elementID}`);
 
-    if (!element) return;
+      if (!element) return;
 
-    element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 50);
   };
 
   return (
@@ -56,7 +58,7 @@ export default function Navbar(props: { isSplashEnd: boolean }) {
           >
             <Box
               component="img"
-              src="/android-chrome-192x192.png"
+              src="/icons/android-chrome-192x192.png"
               sx={{ textAlign: { xs: "center", sm: "left", height: 50 } }}
             />
           </Typography>
