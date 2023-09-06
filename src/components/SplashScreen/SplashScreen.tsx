@@ -6,8 +6,6 @@ import { SplashScreenProps } from "../../@types";
 export default function SplashScreen(props: SplashScreenProps) {
   const { onSplashEnd, children } = props;
 
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from(".splash-text", {
