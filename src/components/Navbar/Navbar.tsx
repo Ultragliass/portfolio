@@ -38,7 +38,6 @@ export default function Navbar(props: { isSplashEnd: boolean }) {
         sx={{
           opacity: props.isSplashEnd ? 1 : 0,
           transition: "opacity 0.5s ease-in-out",
-          position: "sticky",
         }}
       >
         <Toolbar>

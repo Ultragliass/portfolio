@@ -9,7 +9,6 @@ export default function Skills() {
         lg={12}
         xs={12}
         sx={{
-          mt: 15,
           textAlign: {
             xs: "center",
             lg: "left",
@@ -46,7 +45,6 @@ export default function Skills() {
         lg={12}
         xs={12}
         sx={{
-          mt: 15,
           textAlign: {
             xs: "center",
             lg: "left",

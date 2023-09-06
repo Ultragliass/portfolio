@@ -3,12 +3,10 @@ import { Box, Grid, Typography } from "@mui/material";
 export default function About() {
   return (
     <Grid
-    id="about"
+      id="about"
       container
-      spacing={3}
       direction="row-reverse"
       sx={{
-        mt: 5,
         textAlign: {
           xs: "center",
           lg: "left",

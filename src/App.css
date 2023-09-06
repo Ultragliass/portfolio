@@ -1,6 +1,6 @@
-body,
 #root {
-  background-color: #14192f;
+  background: linear-gradient(to bottom, #14192f 70%, #fb027f);
+  overflow-x: hidden;
 }
 
 .splash {

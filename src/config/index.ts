@@ -26,38 +26,44 @@ export const EXTRAS = [
 
 export const PROJECTS = [
   {
-    name: "test1",
-    url: "https://test.test",
-    image: "/placeholder.jpg",
-    repo: "https://test.test",
+    name: "Facial Recognition App",
+    description: "Private project for Claims Conference",
+    url: "",
+    image: "/projects/fr.png",
+    repo: "",
   },
   {
     name: "test2",
     url: "https://test.test",
+    description: "test",
     image: "/placeholder.jpg",
     repo: "https://test.test",
   },
   {
     name: "test3",
     url: "https://test.test",
+    description: "test",
     image: "/placeholder.jpg",
     repo: "https://test.test",
   },
   {
     name: "test4",
     url: "https://test.test",
+    description: "test",
     image: "/placeholder.jpg",
     repo: "https://test.test",
   },
   {
     name: "test5",
     url: "https://test.test",
+    description: "test",
     image: "/placeholder.jpg",
     repo: "https://test.test",
   },
   {
     name: "test6",
     url: "https://test.test",
+    description: "test",
     image: "/placeholder.jpg",
     repo: "https://test.test",
   },

@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, CssBaseline, Typography } from "@mui/material";
 import Lottie from "react-lottie-player";
 import animationData from "./utils/lottie-animation.json";
@@ -8,12 +8,41 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [isSplashEnd, setIsSplashEnd] = useState(false);
 
-  const onSplashEnd = () => setIsSplashEnd(true);
+  const elements = [
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+  ];
 
+  useEffect(() => {
+    elements.forEach((element, index) => {
+      const direction = index % 2 === 0 ? -1 : 1;
+      const distance = 100;
+
+      gsap.from(element.current, {
+        x: direction * distance,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element.current,
+          start: "top center",
+          end: "center center",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+  }, []);
+
+  const onSplashEnd = () => setIsSplashEnd(true);
   return (
     <>
       <CssBaseline />
@@ -37,13 +66,23 @@ function App() {
         sx={{
           opacity: isSplashEnd ? 1 : 0,
           transition: "opacity 0.5s ease-in-out",
+          display: "flex",
+          flexDirection: "column",
+          gap: "500px",
+          my: 10,
         }}
       >
-        <About />
+        <div ref={elements[0]}>
+          <About />
+        </div>
 
-        <Skills />
+        <div ref={elements[1]}>
+          <Skills />
+        </div>
 
-        <Projects />
+        <div ref={elements[2]}>
+          <Projects />
+        </div>
       </Container>
     </>
   );
