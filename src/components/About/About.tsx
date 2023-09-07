@@ -27,8 +27,41 @@ export default function About() {
         <Box
           component="img"
           src="/portrait.png"
-          sx={{ borderRadius: "50% 50% 50% 50%", width: "70%" }}
+          sx={{
+            borderRadius: "50%",
+            width: "70%",
+            position: "relative",
+          }}
         />
+
+        <Box
+          id="atom"
+          sx={(theme) => ({
+            [theme.breakpoints.up("xl")]: {
+              transform: "scale(2)",
+            },
+            [theme.breakpoints.down("xl")]: {
+              transform: "scale(2)",
+            },
+            [theme.breakpoints.only("md")]: {
+              transform: "scale(2.5)",
+            },
+            [theme.breakpoints.down("sm")]: {
+              transform: "scale(1.2)",
+            },
+          })}
+        >
+          <Box className="center" />
+          <Box className="orbit">
+            <Box className="electron" />
+          </Box>
+          <Box className="orbit">
+            <Box className="electron" />
+          </Box>
+          <Box className="orbit">
+            <Box className="electron" />
+          </Box>
+        </Box>
       </Grid>
 
       <Grid

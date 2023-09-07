@@ -1,5 +1,5 @@
 import { Card, CardMedia, Grid, Tooltip, Typography } from "@mui/material";
-import { CONTACT } from "../../config";
+import { CONTACT } from "../../constants";
 
 function Contact() {
   return (

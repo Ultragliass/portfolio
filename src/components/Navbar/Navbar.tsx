@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import { useState } from "react";
-import { NAV_ITEMS } from "../../config";
+import { NAV_ITEMS } from "../../constants";
 
 export default function Navbar(props: { isSplashEnd: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);

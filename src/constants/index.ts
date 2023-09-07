@@ -34,10 +34,10 @@ export const PROJECTS = [
   },
   {
     name: "Alternative create-react-app",
-    url: "https://test.test",
+    url: "https://www.npmjs.com/package/create-react-vite",
     description: "Doesn't create-react-vite sound better?",
     image: "/logos/npm.svg",
-    repo: "https://test.test",
+    repo: "https://github.com/Ultragliass/create-react-vite",
   },
   {
     name: "My portfolio",
@@ -86,7 +86,7 @@ export const CONTACT = [
     name: "gmail",
     display: "Email",
     url: `mailto:${MAIL_TO_DETAILS.email}?subject=${encodeURIComponent(
-      MAIL_TO_DETAILS.subject,
+      MAIL_TO_DETAILS.subject
     )}&body=${encodeURIComponent(MAIL_TO_DETAILS.body)}`,
   },
 ];

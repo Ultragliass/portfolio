@@ -8,7 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { PROJECTS } from "../../config";
+import { PROJECTS } from "../../constants";
 import { gsap } from "gsap";
 import { Lock } from "@mui/icons-material";
 

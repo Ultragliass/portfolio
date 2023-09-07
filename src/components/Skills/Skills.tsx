@@ -1,5 +1,5 @@
 import { Card, CardMedia, Grid, Tooltip, Typography } from "@mui/material";
-import { EXTRAS, SKILLS } from "../../config";
+import { EXTRAS, SKILLS } from "../../constants";
 
 export default function Skills() {
   return (
@@ -19,7 +19,7 @@ export default function Skills() {
       </Grid>
 
       {SKILLS.map((skill) => (
-        <Grid item lg={3} xs={6} key={skill.name}>
+        <Grid item lg={3} md={4} sm={4} xs={6} key={skill.name}>
           <Tooltip title={skill.display}>
             <Card
               sx={{
@@ -55,7 +55,7 @@ export default function Skills() {
       </Grid>
 
       {EXTRAS.map((extra) => (
-        <Grid item lg={3} xs={6} key={extra.name}>
+        <Grid item lg={3} md={4} sm={4} xs={6} key={extra.name}>
           <Tooltip title={extra.display}>
             <Card
               sx={{

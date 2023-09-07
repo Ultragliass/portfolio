@@ -7,13 +7,13 @@ function Footer() {
       sx={{
         py: 3,
         px: 2,
-        mt: "auto",
+        mt: "150px",
         bgcolor: "#1f2747",
       }}
     >
       <Container maxWidth="sm">
         <Typography variant="body1">
-          Created by 'Mechanical' Michael H.
+          Created by &apos;`Mechanical&apos;` Michael H.
         </Typography>
 
         <Typography variant="body2">
